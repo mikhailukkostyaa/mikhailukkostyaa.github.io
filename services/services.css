@@ -1,0 +1,324 @@
+/* Services Detail Section */
+.services-detail-section {
+    background: linear-gradient(180deg, #121139 0%, #1a1a4e 100%);
+    padding: 100px 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-detail-section::before {
+    content: '';
+    position: absolute;
+    top: -300px;
+    left: -300px;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.services-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Service Card */
+.service-card {
+    background: linear-gradient(135deg, rgba(45, 27, 105, 0.6), rgba(26, 26, 78, 0.6));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    border-radius: 30px;
+    padding: 50px 40px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(73, 69, 248, 0.1), rgba(144, 48, 244, 0.1));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(139, 92, 246, 0.6);
+    box-shadow: 0 20px 60px rgba(139, 92, 246, 0.4);
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-card.featured {
+    border-color: #4945F8;
+    background: linear-gradient(135deg, rgba(73, 69, 248, 0.3), rgba(144, 48, 244, 0.3));
+}
+
+
+.service-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(73, 69, 248, 0.2), rgba(144, 48, 244, 0.2));
+    border-radius: 20px;
+    border: 2px solid rgba(139, 92, 246, 0.3);
+}
+
+.service-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.service-card h3 {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.service-card > p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Service Features */
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.service-features li {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+    position: relative;
+    padding-left: 30px;
+}
+
+.service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4945F8;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.service-features li:last-child {
+    border-bottom: none;
+}
+
+/* Service Price */
+.service-price {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 2px solid rgba(139, 92, 246, 0.3);
+}
+
+.price-label {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.price-value {
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #4945F8, #9030F4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.price-period {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1400px;
+    margin: 60px auto 0;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, rgba(73, 69, 248, 0.05), rgba(144, 48, 244, 0.05));
+    border-radius: 20px;
+    border: 2px solid rgba(139, 92, 246, 0.1);
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+}
+
+.benefit-number {
+    font-size: 64px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #4945F8, #9030F4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.benefit-item h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #232323;
+    margin-bottom: 15px;
+}
+
+.benefit-item p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #4945F8, #9030F4);
+    padding: 100px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.cta-content .consultation-btn {
+    background: white;
+    color: #4945F8;
+    border: none;
+}
+
+.cta-content .consultation-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-detail-section {
+        padding: 60px 30px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .service-card {
+        padding: 40px 30px;
+    }
+    
+    .service-card h3 {
+        font-size: 24px;
+    }
+    
+    .cta-content h2 {
+        font-size: 36px;
+    }
+
+    .cta-content p {
+        font-size: 18px;
+    }
+}
